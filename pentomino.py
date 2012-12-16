@@ -306,7 +306,16 @@ def main(m, n, k, g):
         # mutation
         c += 1
 
-main(10, 3, 500, 301) # m, n, population size, number of generations
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 5:
+        print("Usage: [python3] pentomino.py m n populationSize numberOfGenerations")
+    else:
+        m = int(sys.argv[1])
+        n = int(sys.argv[2])
+        pop = int(sys.argv[3])
+        gen = int(sys.argv[4])
+        main(m, n, pop, gen) # m, n, population size, number of generations
     
             
         
